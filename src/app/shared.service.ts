@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SharedService {
+
+  constructor(private http:HttpClient) { 
+
+
+  }
+
+
+  PostDetails(data:any){
+    return this.http.post("http://localhost:3000/studentInfo",data)
+  }
+}
